@@ -20,7 +20,9 @@ class Task {
 
     for (var s in strings) print(s);
     for (var n in numbers) print(n);
+
   }
+
 }
 
 void main() => Task().printAll();
