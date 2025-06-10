@@ -25,8 +25,7 @@ void main() {
 
 class Aufgabe1 {
   static bool Zulassung(int age, bool consent, int ageRating) {
-    // Changed logic to allow if age is >= ageRating OR consent is true
-    return age >= ageRating || consent;
+    return age >= ageRating && consent;
   }
 }
 
