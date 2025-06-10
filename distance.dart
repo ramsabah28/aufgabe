@@ -63,9 +63,12 @@ void main() {
 
   // Fahrzeiten berechnen
   final result = reiseroute.map((k, v) => MapEntry(k, v / geschwindigkeit));
+  final result_2 = friendsInput.map((k, v) => MapEntry(k, v / geschwindigkeit));
   final gesamtZeit = result.values.reduce((a, b) => a + b);
   final gesamtKm = reiseroute.values.reduce((a, b) => a + b);
+  final gesamtKm_2 = friendsInput.values.reduce((a, b) => a + b);
   final durchschnittZeit = gesamtZeit / result.length;
+  final durchschnittZeit_2 = gesamtZeit / result.length;
 
   // Ergebnisse ausgeben
   print('\nDeine Reiseroute bei $geschwindigkeit km/h (${mittel.name[0].toUpperCase()}${mittel.name.substring(1)}):');
