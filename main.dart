@@ -21,7 +21,22 @@ class Task {
     for (var s in strings) print(s);
     for (var n in numbers) print(n);
 
+    String V = "Text";
+
+    switch (V) {
+      case "Non":
+        print("object");
+
+      case "Text" :
+      case "Text" :
+        print("OK");
+
+
+    }
   }
+
+
+
 
 }
 
