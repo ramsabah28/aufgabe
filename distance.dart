@@ -6,7 +6,6 @@ void main() {
   final Map<String, int> friendsInput = {};
   String? response;
 
-  // Freunde eingeben
   while (response?.toUpperCase() != 'NO') {
     stdout.write('Name des Freundes: ');
     final name = stdin.readLineSync()?.trim();
@@ -41,12 +40,12 @@ void main() {
     }
   } while (mittel == null);
 
-  print('Du hast ausgewählt: ${mittel.name[0].toUpperCase()}${mittel.name.substring(1)}');
+  print(
+      'Du hast ausgewählt: ${mittel.name[0].toUpperCase()}${mittel.name.substring(1)}');
 
   // Freunde sortiert ausgeben
   print('\nFreunde und Entfernungen (sortiert):');
-  friendsInput.entries
-      .toList()
+  friendsInput.entries.toList()
     ..sort((a, b) => a.value.compareTo(b.value))
     ..forEach((e) => print('${e.key}: ${e.value} km'));
 
@@ -71,8 +70,10 @@ void main() {
   final durchschnittZeit_2 = gesamtZeit / result.length;
 
   // Ergebnisse ausgeben
-  print('\nDeine Reiseroute bei $geschwindigkeit km/h (${mittel.name[0].toUpperCase()}${mittel.name.substring(1)}):');
-  result.forEach((name, zeit) => print('$name: ${reiseroute[name]} km, Zeit: ${zeit.toStringAsFixed(2)} h'));
+  print(
+      '\nDeine Reiseroute bei $geschwindigkeit km/h (${mittel.name[0].toUpperCase()}${mittel.name.substring(1)}):');
+  result.forEach((name, zeit) => print(
+      '$name: ${reiseroute[name]} km, Zeit: ${zeit.toStringAsFixed(2)} h'));
   print('Gesamtdistanz: $gesamtKm km');
   print('Gesamtfahrzeit: ${gesamtZeit.toStringAsFixed(2)} h');
   print('Durchschnittliche Fahrzeit: ${durchschnittZeit.toStringAsFixed(2)} h');
